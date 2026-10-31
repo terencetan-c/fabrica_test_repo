@@ -1,0 +1,137 @@
+{
+  "data": {
+    "id": "10.5286/isis.e.24090616",
+    "type": "dois",
+    "attributes": {
+      "doi": "10.5286/isis.e.24090616",
+      "prefix": "10.5286",
+      "suffix": "isis.e.24090616",
+      "identifiers": [],
+      "alternateIdentifiers": [],
+      "creators": [
+        {
+          "name": "Dr Ray Osborn",
+          "affiliation": [],
+          "nameIdentifiers": []
+        },
+        {
+          "name": "Dr Omar Chmaissem",
+          "affiliation": [],
+          "nameIdentifiers": []
+        },
+        {
+          "name": "Dr Jared Allred",
+          "affiliation": [],
+          "nameIdentifiers": []
+        },
+        {
+          "name": "Mr Keith Taddei",
+          "affiliation": [],
+          "nameIdentifiers": []
+        }
+      ],
+      "titles": [
+        {
+          "title": "1310404"
+        }
+      ],
+      "publisher": "ISIS Facility",
+      "container": {},
+      "publicationYear": 2013,
+      "subjects": [
+        {
+          "subject": "neutron diffraction",
+          "valueUri": "https://w3id.org/PaN/PaNET#PaNET01217",
+          "schemeUri": "https://w3id.org/PaN/PaNET",
+          "subjectScheme": "PaNET",
+          "classificationCode": "PaNET#PaNET01217"
+        }
+      ],
+      "contributors": [],
+      "dates": [
+        {
+          "date": "2013",
+          "dateType": "Issued"
+        }
+      ],
+      "language": null,
+      "types": {
+        "ris": "GEN",
+        "bibtex": "misc",
+        "citeproc": "article",
+        "schemaOrg": "CreativeWork"
+      },
+      "relatedIdentifiers": [],
+      "relatedItems": [],
+      "sizes": [],
+      "formats": [],
+      "version": null,
+      "rightsList": [],
+      "descriptions": [],
+      "geoLocations": [],
+      "fundingReferences": [],
+      "xml": "PD94bWwgdmVyc2lvbj0iMS4wIj8+CjxyZXNvdXJjZSB4bWxucz0iaHR0cDovL2RhdGFjaXRlLm9yZy9zY2hlbWEva2VybmVsLTIuMiIgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtMi4yIGh0dHA6Ly9zY2hlbWEuZGF0YWNpdGUub3JnL21ldGEva2VybmVsLTIuMi9tZXRhZGF0YS54c2QiPgogIDxpZGVudGlmaWVyIGlkZW50aWZpZXJUeXBlPSJET0kiPjEwLjUyODYvSVNJUy5FLjI0MDkwNjE2PC9pZGVudGlmaWVyPgogIDxjcmVhdG9ycz4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWU+RHIgUmF5IE9zYm9ybjwvY3JlYXRvck5hbWU+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lPkRyIE9tYXIgQ2htYWlzc2VtPC9jcmVhdG9yTmFtZT4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWU+RHIgSmFyZWQgQWxscmVkPC9jcmVhdG9yTmFtZT4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWU+TXIgS2VpdGggVGFkZGVpPC9jcmVhdG9yTmFtZT4KICAgIDwvY3JlYXRvcj4KICA8L2NyZWF0b3JzPgogIDx0aXRsZXM+CiAgICA8dGl0bGU+MTMxMDQwNDwvdGl0bGU+CiAgPC90aXRsZXM+CiAgPHB1Ymxpc2hlcj5JU0lTIEZhY2lsaXR5PC9wdWJsaXNoZXI+CiAgPHB1YmxpY2F0aW9uWWVhcj4yMDEzPC9wdWJsaWNhdGlvblllYXI+CjwvcmVzb3VyY2U+Cg==",
+      "url": "https://data.isis.stfc.ac.uk/doi/INVESTIGATION/24090616/",
+      "contentUrl": null,
+      "metadataVersion": 1,
+      "schemaVersion": "http://datacite.org/schema/kernel-2.2",
+      "source": null,
+      "isActive": true,
+      "state": "findable",
+      "reason": null,
+      "viewCount": 0,
+      "viewsOverTime": [],
+      "downloadCount": 0,
+      "downloadsOverTime": [],
+      "referenceCount": 0,
+      "citationCount": 0,
+      "citationsOverTime": [],
+      "partCount": 0,
+      "partOfCount": 0,
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "created": "2015-12-01T13:32:06.000Z",
+      "registered": "2015-12-01T13:32:06.000Z",
+      "published": "2013",
+      "updated": "2020-08-19T21:54:01.000Z"
+    },
+    "relationships": {
+      "client": {
+        "data": {
+          "id": "bl.stfc",
+          "type": "clients"
+        }
+      },
+      "provider": {
+        "data": {
+          "id": "duqf",
+          "type": "providers"
+        }
+      },
+      "media": {
+        "data": {
+          "id": "10.5286/isis.e.24090616",
+          "type": "media"
+        }
+      },
+      "references": {
+        "data": []
+      },
+      "citations": {
+        "data": []
+      },
+      "parts": {
+        "data": []
+      },
+      "partOf": {
+        "data": []
+      },
+      "versions": {
+        "data": []
+      },
+      "versionOf": {
+        "data": []
+      }
+    }
+  }
+}

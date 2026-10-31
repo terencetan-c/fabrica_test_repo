@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4/metadata.xsd">
+  <identifier identifierType="DOI">10.85126/Z7SX-N808</identifier>
+  <creators>
+    <creator>
+      <creatorName nameType="Personal">Collins, Stephen</creatorName>
+      <givenName>Stephen</givenName>
+      <familyName>Collins</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="https://orcid.org">https://orcid.org/0000-0001-5120-0764</nameIdentifier>
+    </creator>
+    <creator>
+      <creatorName nameType="Personal">Tan, Terence</creatorName>
+      <givenName>Terence</givenName>
+      <familyName>Tan</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID" schemeURI="https://orcid.org">https://orcid.org/0009-0008-7829-3647</nameIdentifier>
+    </creator>
+  </creators>
+  <titles>
+    <title>Dummy LaB6 calibration dataset</title>
+  </titles>
+  <publisher publisherIdentifier="https://ror.org/05etxs293" publisherIdentifierScheme="ROR" schemeURI="https://ror.org">Diamond Light Source</publisher>
+  <publicationYear>2026</publicationYear>
+  <resourceType resourceTypeGeneral="Dataset"/>
+  <subjects>
+    <subject subjectScheme="Photon and Neutron Experimental Techniques (PaNET) ontology" schemeURI="https://w3id.org/PaN/PaNET" valueURI="http://purl.org/pan-science/PaNET/PaNET01124" classificationCode="PaNET01124">small angle scattering-based techniques</subject>
+    <subject>LaB6</subject>
+    <subject>lanthanum hexaboride</subject>
+    <subject>calibration</subject>
+    <subject>beamline calibration</subject>
+    <subject>synchrotron radiation</subject>
+    <subject>I22</subject>
+    <subject subjectScheme="NeXus Ontology" schemeURI="http://purl.org/nexusformat" valueURI="http://purl.org/nexusformat/definitions/Application/NXcanSAS">NXcanSAS</subject>
+  </subjects>
+  <sizes/>
+  <formats>
+    <format>application/x-hdf5</format>
+    <format>NeXus</format>
+  <formats/>
+  <version/>
+</resource>
