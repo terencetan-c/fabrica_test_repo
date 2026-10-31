@@ -100,8 +100,6 @@ with st.sidebar:
 
 ontology_path = Path(__file__).with_name('PaNET.owl')
 
-ontology_path = Path(__file__).with_name('PaNET.owl')
-
 if ontology_path.exists():
     try:
         graph, classes, labels = load_ontology(
@@ -155,7 +153,7 @@ for record in records:
         continue
     subjects = [s for s in (attrs.get('subjects') or []) if panet_subject(s)]
     if subjects:
-        panet_records.append({'doi': attrs.get('doi') or record.get('id'), 'title': title_of(attrs), 'subjects': subjects})
+        panet_records.append({'doi': attrs.get('doi') or record.get('id'), 'title': title_of(attrs), 'url': attrs.get('url') or '', 'subjects': subjects})
 
 c1, c2, c3 = st.columns(3)
 c1.metric('Retrieved DOI records', len(records))
@@ -209,13 +207,44 @@ if selected:
             if uri and uri in expanded:
                 hits.append(s)
         if hits:
-            matches.append({'Title': r['title'], 'DOI': r['doi'], 'DOI link': f'https://doi.test.datacite.org/{r["doi"]}', 'Matching technique(s)': '; '.join(str(s.get('subject') or labels.get(canonical_uri(s.get('valueUri')), '')) for s in hits), 'Match type': 'Exact' if any(canonical_uri(s.get('valueUri')) == canonical_uri(selected) for s in hits) else 'Subclass', 'Matching URI(s)': '; '.join(str(s.get('valueUri')) for s in hits)})
+            matches.append({
+                'Title': r['title'],
+                'DOI': r['doi'],
+                'Dataset URL': r['url'],
+                'Matching technique(s)': '; '.join(
+                    str(
+                        s.get('subject')
+                        or labels.get(canonical_uri(s.get('valueUri')), '')
+                    )
+                    for s in hits
+                ),
+                'Match type': (
+                    'Exact'
+                    if any(
+                        canonical_uri(s.get('valueUri')) == canonical_uri(selected)
+                        for s in hits
+                    )
+                    else 'Subclass'
+                ),
+                'Matching URI(s)': '; '.join(
+                    str(s.get('valueUri')) for s in hits
+                )
+            })
     st.write(f'**{len(matches)} matching datasets**')
     if missing_uri_count:
         st.caption(f'{missing_uri_count} PaNET subject annotations have no valueUri and cannot be matched reliably by ontology URI.')
     if matches:
         result_df = pd.DataFrame(matches)
-        st.dataframe(result_df, use_container_width=True, column_config={'DOI link': st.column_config.LinkColumn('DOI link')})
+        st.dataframe(
+            result_df,
+            use_container_width=True,
+            column_config={
+                'Dataset URL': st.column_config.LinkColumn(
+                    'Dataset URL',
+                    display_text='Open dataset'
+                )
+            }
+        )
         st.download_button('Download matching datasets CSV', result_df.to_csv(index=False), 'panet_search_results.csv', 'text/csv')
     else:
         st.info('No datasets match this technique. Check that the dataset subjects have PaNET valueUri identifiers and that the ontology version contains those terms.')
