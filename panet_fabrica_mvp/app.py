@@ -5,6 +5,8 @@ import pandas as pd
 import requests
 import streamlit as st
 from rdflib import Graph, RDF, RDFS, OWL, URIRef
+import hmac
+
 
 API = 'https://api.test.datacite.org/dois'
 PANET_BASE = 'http://purl.org/pan-science/PaNET/'
@@ -12,6 +14,41 @@ ONTOLOGY_URL = 'https://raw.githubusercontent.com/pan-ontologies/PaNET/master/re
 PANET_ROOT = 'http://purl.org/pan-science/PaNET/PaNET00001'
 
 st.set_page_config(page_title='Fabrica PaNET semantic search', layout='wide')
+
+def check_app_password():
+    if st.session_state.get("authenticated", False):
+        return True
+
+    st.title("PaNET Semantic Dataset Search")
+    st.info("Please enter the application access password.")
+
+    with st.form("app_login"):
+        entered_password = st.text_input(
+            "Application password",
+            type="password"
+        )
+        submitted = st.form_submit_button("Log in")
+
+    if submitted:
+        if hmac.compare_digest(
+            entered_password,
+            st.secrets["APP_PASSWORD"]
+        ):
+            st.session_state["authenticated"] = True
+            st.rerun()
+        else:
+            st.error("Incorrect password.")
+
+    return False
+
+
+if not check_app_password():
+    st.stop()
+
+if st.sidebar.button("Log out"):
+    st.session_state.clear()
+    st.rerun()
+
 st.title('Fabrica Test: PaNET semantic dataset search')
 st.caption(f'DataCite Test repository')
 
